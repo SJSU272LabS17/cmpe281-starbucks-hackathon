@@ -1,0 +1,17 @@
+{
+  "name": "starbucksserver.js",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.0.0",
+    "mongoose": "~3.6.13",
+    "body-parser": "~1.0.1"
+  },
+  "version": "1.0.0",
+  "description": "starbucks REST framework",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deepika Kalani",
+  "license": "ISC"
+}
