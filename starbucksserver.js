@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 var conn = mongoose.createConnection('mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]', options);
 */
 
-mongoose.connect('mongodb://localhost:27017/orders');
+mongoose.connect('mongodb://127.0.0.1:27017/orders');
 
 router.get('/', function(req, res) {
       res.json({ message: 'hooray! welcome!' });
@@ -32,8 +32,7 @@ router.route('/orders')
 	})
 
 	.post(function(req, res){
-		console.log(req);
-		var db = new mongoOrder({orderid: req.body.orderid, customerid: req.body.customerid, coffeename: req.body.coffeename, mugsize: req.body.mugsize});
+		var db = new mongoOrder({coffeename: req.body.coffeename, mugsize: req.body.mugsize});
 		console.log(db);
 		var response = {};
 		db.save(function(err){
